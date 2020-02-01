@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Vasl.activity.MainActivity">
+
+    <com.faraaf.tictacdev.choicerview.Vasl.choicer.PresetRadioGroup
+        android:id="@+id/preset_time_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:presetRadioCheckedId="@id/phone">
+
+        <com.faraaf.tictacdev.choicerview.Vasl.choicer.PresetValueButton
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:contentTitle="You can login with your mobile number"
+            app:srcIconCheck="@drawable/ic_check"
+            app:srcIconMain="@drawable/ic_phone"
+            app:textTitle="Phone" />
+
+        <com.faraaf.tictacdev.choicerview.Vasl.choicer.PresetValueButton
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:contentTitle="You can login with your email address"
+            app:srcIconCheck="@drawable/ic_check"
+            app:srcIconMain="@drawable/ic_email"
+            app:textTitle="Email" />
+
+    </com.faraaf.tictacdev.choicerview.Vasl.choicer.PresetRadioGroup>
+
+
+    <TextView
+        android:id="@+id/witchID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#445A6F"
+        android:textSize="18sp" />
+
+
+</LinearLayout>
