@@ -1,5 +1,6 @@
 package com.faraaf.tictacdev.choicerview.Vasl.choicer;
 
+import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -48,6 +49,7 @@ public class PresetValueButton extends RelativeLayout implements RadioCheckable 
     private Drawable srcIconCheck;
     private String titleText;
     private String contentText;
+    private ObjectAnimator objectanimator1, objectanimator2;
 
     public PresetValueButton(Context context) {
         super(context);
@@ -195,18 +197,21 @@ public class PresetValueButton extends RelativeLayout implements RadioCheckable 
     }
 
     public void scaleViewChecked(View v) {
-        Animation anim = new ScaleAnimation(1f, 1.04f, // Start and end values for the X axis scalingstartScale, endScale, // Start and end values for the Y axis scalingAnimation.RELATIVE_TO_SELF, 0f, // Pivot point of X scaling
-                Animation.RELATIVE_TO_SELF, 1.04f);// Pivot point of Y scaling
-        anim.setFillAfter(true); // Needed to keep the result of the animation
-        anim.setDuration(200);
-        v.startAnimation(anim);
+        objectanimator1 = ObjectAnimator.ofFloat(parentView, "scaleX", 1.08f);
+        objectanimator2 = ObjectAnimator.ofFloat(parentView, "scaleY", 1.08f);
+        objectanimator1.setDuration(200);
+        objectanimator2.setDuration(200);
+        objectanimator1.start();
+        objectanimator2.start();
     }
 
     public void scaleViewUnchecked(View v) {
-        Animation anim = new ScaleAnimation(1f, 1f, Animation.RELATIVE_TO_SELF, 1f);
-        anim.setFillAfter(true);
-        anim.setDuration(200);
-        v.startAnimation(anim);
+        objectanimator1 = ObjectAnimator.ofFloat(parentView, "scaleX", 1f);
+        objectanimator2 = ObjectAnimator.ofFloat(parentView, "scaleY", 1f);
+        objectanimator1.setDuration(200);
+        objectanimator2.setDuration(200);
+        objectanimator1.start();
+        objectanimator2.start();
     }
 
     public void setNormalState() {
