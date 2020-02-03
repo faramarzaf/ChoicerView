@@ -16,6 +16,10 @@ import com.faraaf.tictacdev.choicerview.Vasl.utils.ViewUtils;
 
 import java.util.HashMap;
 
+/**
+ * @author Faramarz Afzali
+ * @since Feb 1, 2019
+ */
 public class PresetRadioGroup extends LinearLayout {
 
     // Attribute Variables

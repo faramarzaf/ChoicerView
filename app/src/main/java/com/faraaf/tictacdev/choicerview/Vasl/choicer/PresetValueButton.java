@@ -24,6 +24,10 @@ import com.faraaf.tictacdev.choicerview.R;
 
 import java.util.ArrayList;
 
+/**
+ * @author Faramarz Afzali
+ * @since Feb 1, 2019
+ */
 
 public class PresetValueButton extends RelativeLayout implements RadioCheckable {
 
